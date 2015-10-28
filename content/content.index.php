@@ -373,7 +373,7 @@ class contentExtensionImportcsvIndex extends AdministrationPage
         header('Content-Disposition: attachment; filename="' . $fileName . '"');
 
         // Show the headers:
-        echo implode(';', $headers) . "\n";
+        echo implode(',', $headers) . "\n";
 
          /*
          * Enable filtering!
@@ -439,7 +439,7 @@ class contentExtensionImportcsvIndex extends AdministrationPage
                     }
                     $line[] = '"' . str_replace('"', '""', trim($value)) . '"';
                 }
-                echo implode(';', $line) . "\r\n";
+                echo implode(',', $line) . "\r\n";
             }
         }
         die();
@@ -556,4 +556,3 @@ class contentExtensionImportcsvIndex extends AdministrationPage
     }
 
 }
-
